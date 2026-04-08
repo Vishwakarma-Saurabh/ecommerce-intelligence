@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce Intelligence</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🛍️ E-commerce Intelligence Platform</h1>
+            <p>ML-Powered Fraud Detection & Analytics</p>
+        </header>
+
+        <div class="tabs">
+            <button class="tab-btn active" onclick="showTab('fraud')">🚨 Fraud Detection</button>
+            <button class="tab-btn" onclick="showTab('sales')">📈 Sales Predictor</button>
+            <button class="tab-btn" onclick="showTab('segment')">👥 Customer Segment</button>
+        </div>
+
+        <!-- Fraud Detection Tab -->
+        <div id="fraud-tab" class="tab-content active">
+            <div class="card">
+                <h2>Transaction Fraud Check</h2>
+                <div class="input-group">
+                    <label>Enter 10 transaction features (comma-separated):</label>
+                    <textarea id="fraud-features" rows="3" placeholder="e.g., 0.5, 1.2, -0.3, 2.1, -1.5, 0.8, 1.1, -0.7, 2.3, -1.2"></textarea>
+                    <button onclick="checkFraud()">🔍 Check Transaction</button>
+                </div>
+                <div id="fraud-result" class="result"></div>
+            </div>
+        </div>
+
+        <!-- Sales Prediction Tab -->
+        <div id="sales-tab" class="tab-content">
+            <div class="card">
+                <h2>Sales Prediction</h2>
+                <div class="input-group">
+                    <label>Enter 8 marketing features (comma-separated):</label>
+                    <textarea id="sales-features" rows="3" placeholder="e.g., 1.2, -0.5, 2.1, -1.3, 0.7, 1.8, -0.9, 1.5"></textarea>
+                    <button onclick="predictSales()">📊 Predict Sales</button>
+                </div>
+                <div id="sales-result" class="result"></div>
+            </div>
+        </div>
+
+        <!-- Customer Segment Tab -->
+        <div id="segment-tab" class="tab-content">
+            <div class="card">
+                <h2>Customer Segmentation</h2>
+                <div class="input-group">
+                    <label>Enter 6 customer features (comma-separated):</label>
+                    <textarea id="segment-features" rows="3" placeholder="e.g., 2.1, -1.2, 0.8, 1.5, -0.7, 2.3"></textarea>
+                    <button onclick="segmentCustomer()">👤 Analyze Customer</button>
+                </div>
+                <div id="segment-result" class="result"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
